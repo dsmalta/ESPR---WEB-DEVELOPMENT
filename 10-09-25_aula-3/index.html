@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo dos Palitinhos</title>
+    <style>
+        .box {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogo dos Palitinhos</h1>
+
+    Nome:
+    <input type="text" id="caixaNome"/>
+    <button onclick="alterarNome()">Alterar Nome</button>
+    
+    <table>
+        <tr>
+            <td class="box">
+                <h2 id="nomeUsuario">EU</h2>
+                <h3>
+                    Palitos: <span id="qtdeEu">3</span>
+                </h3>
+                <button onclick="palitosUserAumenta()">Jogar</button>
+            </td>
+            <td class="box">
+                <h2>Computador</h2>
+                <h3>
+                    Palitos: <span id="qtdeComp">3</span>
+                </h3>
+                <button>Jogar</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+    
+    
+        // let nome = prompt("Digite seu nome:")
+        // console.log("Nome:", nome)
+
+        // Exemplo de como mudar string para int
+
+        // let idade = prompt("Digite seu nome: ")
+        // idade = idade + 1 vai retornar a resposta em string
+        // idade = parseInt(idade) // parseInt tenta transformar uma string em número inteiro
+        // idade = idade + 1
+        // console.log("Sua idade é ", idade)
+
+        // Executar linhas 46 e 47 junto com as linhas 57 e 58
+        
+        // let elemento = document.getElementById("nomeUsuario")
+        // elemento.innerText = nome
+        
+        // Fazer e chamar funções
+       
+        // Função de Exemplo
+        
+        function imprimeBobeira() {
+            console.log("=========");
+            console.log("BOBEIRA");
+            console.log("=========");
+        }
+
+        imprimeBobeira()
+        imprimeBobeira()
+        imprimeBobeira()
+        imprimeBobeira()
+
+        // Função de alterar nome
+
+        function alterarNome() {
+            console.log("Passei aqui")
+            let elemInput = document.getElementById("caixaNome")
+            let nome = elemInput.value 
+            
+            let elem = document.getElementById("nomeUsuario")
+            elem.innerText = nome
+            console.log("elem", elem)
+        }
+
+        alterarNome()
+
+        function palitosUsuarioAumenta() {
+            console.log("funcao usuario")
+            let quantidadePalito = document.getElementById("qtdeEu")
+            let palitoUserAumenta = quantidadePalito.value
+            palitoUserAumenta = palitoUserAumenta + 1
+            palitoUserAumenta = parseInt(palitoUserAumenta)
+            palitoUserAumenta.innerText = palitoUserAumenta
+        }
+
+        palitosUsuarioAumenta()
+
+        function palitosCompDiminui() {
+            console.log("funcao comp")
+            let palitos
+        }
+        
+        palitosCompDiminui()
+
+    </script>
+</body>
+</html>
