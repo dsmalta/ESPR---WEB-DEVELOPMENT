@@ -28,5 +28,6 @@ function DataFetcher() {
             }
         }
         fetchData()
-    }, [])
+    }, []);
+    return ()
 }
