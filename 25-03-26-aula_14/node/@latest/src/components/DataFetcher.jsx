@@ -27,5 +27,6 @@ function DataFetcher() {
                 setLoading(false);
             }
         }
-    })
+        fetchData()
+    }, [])
 }
